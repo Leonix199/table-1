@@ -13,41 +13,44 @@
   --clr-gray700: #161d34;
   --clr-pending: #fff0c2;
   --clr-pending-font: #a68b00;
-  --clr-unpaid: #ffcdd2;
+  --clr-unpaid: #f8a0a9;
   --clr-unpaid-font: #c62828;
-  --clr-paid: #c8e6c9;
+  --clr-paid: #b5ffb7;
   --clr-paid-font: #388e3c;
   --clr-link: #2962ff;
-/* Border Radius */
-  --border-radius: 0.2rem;
+  --border-radius: 0.2rem; /* Border Radius */
 }
 
 *, *::before, *::after{
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 10px;
 }
 
 body{
-  font-family: 'Mukta', sans-serif;
+  font-family: 'Lato', sans-serif;
   height: 100vh;
   display: grid;
   justify-content: center;
   align-items: center;
   color: var(--clr-gray500);
   font-size: 0.9rem;
-  background-color: #ccc;
+  background-color: #f9fbff;
 }
 
-.table{
+table{
   border-collapse: collapse;
-  box-shadow: 0 5px 10px var(--clr-gray300);
+  box-shadow: 0 5px 10px var(--clr-gray500);
   background-color: #fff;
-  text-align: left;
+  text-align: center;
   overflow: hidden;
 }
 
-.thead th{
+thead tr{
+  box-shadow: 0 5px 10px var(--clr-gray400);
+}
+
+thead tr th{
   flex-direction: row;
   padding: 1rem 2rem;
   text-transform: uppercase;
@@ -56,42 +59,42 @@ body{
   font-weight: 900;
 }
 
-.thead td{
+thead td{
   padding: 1rem 2rem;
 }
 
-.thead a{
+table tbody tr td a{
   text-decoration: none;
   color: var(--clr-link);
 }
 
 .status{
   border-radius: var(--border-radius);
-  background-color: var(--clr-gray150);
+  background-color: var(--clr-gray100);
   padding: 0.2rem 1rem;
   text-align: center;
 }
 
-.status, .status-pending{
+p .status, .status-pending{
   background-color: var(--clr-pending);
   color: var(--clr-pending-font);
 }
 
-.status, .status-paid{
+p .status, .status-paid{
   background-color: var(--clr-paid);
   color: var(--clr-paid-font);
 }
     
-.status, .status-unpaid{
+p .status, .status-unpaid{
   background-color: var(--clr-unpaid);
   color: var(--clr-unpaid-font);
 }
 
-.amount{
+table tbody tr td .amount{
   text-align: right;
 }
 
 /* Color Alternating Rows */
-.tbody tr:nth-child(even){
-  background-color: var(--clr-gray150);
+tbody tr:nth-child(even){
+  background-color: var(--clr-gray300);
 }
